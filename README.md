@@ -10,6 +10,8 @@ You are not allowed to collaborate during the sprint challenge.
 
 ## Project Set Up
 
+xxx
+
 - [ ] Fork and clone the repo. Delete your old fork from Github first if you are repeating this Unit.
 - [ ] Open the assignment in Canvas and click on the "Set up git" option.
 - [ ] Follow instructions to set up Codegrade's Webhook and Deploy Key.
