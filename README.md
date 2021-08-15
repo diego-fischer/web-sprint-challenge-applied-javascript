@@ -10,8 +10,6 @@ You are not allowed to collaborate during the sprint challenge.
 
 ## Project Set Up
 
-xxx
-
 - [ ] Fork and clone the repo. Delete your old fork from Github first if you are repeating this Unit.
 - [ ] Open the assignment in Canvas and click on the "Set up git" option.
 - [ ] Follow instructions to set up Codegrade's Webhook and Deploy Key.
@@ -32,8 +30,8 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 
 ### Instructions
 
-- [ ] Navigate to the root of the project with your command line.
-- [ ] Run `npm install` to download the dependencies listed in the `package.json` file.
+- [x] Navigate to the root of the project with your command line.
+- [x] Run `npm install` to download the dependencies listed in the `package.json` file.
 - [ ] Run `npm start` to compile the project and serve it.
 - [ ] Navigate Chrome to `http://localhost:3000`
 - [ ] In a separate terminal, run `npm test` to run tests.
@@ -67,7 +65,16 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is the DOM?
-2. What is an event?
-3. What is an event listener?
-4. Why would we convert a NodeList into an Array?
-5. What is a component?
+   The Document-object model is the mapping of html elements to nodes, which are objects that can be easily manipulated.
+
+1. What is an event?
+   Events are triggered by either interactions with a webpage (e.g. clicking, scrolling, dragging and dropping, keyboard inputs) or by normal behaviors from the browser (e.g. page completes loading). Each html element has events that it can handle, thus allowing the developer to build logic based on those events
+
+1. What is an event listener?
+   Events listeners are 'catchers' which wait for specific events to occur, then triggering logic specified by the developer.
+
+1. Why would we convert a NodeList into an Array?
+   Because Arrays are more flexible (i.e. have more methods for us to work with)
+
+1. What is a component?
+   Is a set of html, js and css which can be reused. Creating an element allows us to write DRY code and be more efficient.
