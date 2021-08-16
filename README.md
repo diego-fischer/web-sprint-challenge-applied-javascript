@@ -38,9 +38,9 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 
 **Steps Required for MVP:**
 
-- [ ] Steps 1 and 2 are explained inside the `src/components/header.js` file.
-- [ ] Steps 3 and 4 are explained inside the `src/components/tabs.js` file.
-- [ ] Steps 5 and 6 are explained inside the `src/components/card.js` file.
+- [ x] Steps 1 and 2 are explained inside the `src/components/header.js` file.
+- [ x] Steps 3 and 4 are explained inside the `src/components/tabs.js` file.
+- [ x] Steps 5 and 6 are explained inside the `src/components/card.js` file.
 
 **Important Notes:**
 
@@ -65,16 +65,16 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is the DOM?
-   The Document-object model is the mapping of html elements to nodes, which are objects that can be easily manipulated.
+   Is the data representation of the objects that comprise the structure and content of a document on the web.
 
-1. What is an event?
+2. What is an event?
    Events are triggered by either interactions with a webpage (e.g. clicking, scrolling, dragging and dropping, keyboard inputs) or by normal behaviors from the browser (e.g. page completes loading). Each html element has events that it can handle, thus allowing the developer to build logic based on those events
 
-1. What is an event listener?
+3. What is an event listener?
    Events listeners are 'catchers' which wait for specific events to occur, then triggering logic specified by the developer.
 
-1. Why would we convert a NodeList into an Array?
+4. Why would we convert a NodeList into an Array?
    Because Arrays are more flexible (i.e. have more methods for us to work with)
 
-1. What is a component?
+5. What is a component?
    Is a set of html, js and css which can be reused. Creating an element allows us to write DRY code and be more efficient.
