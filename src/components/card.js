@@ -54,15 +54,9 @@ const cardAppender = (selector) => {
     let obj = res.data.articles
 
     for (let topic in res.data.articles) {
-      // console.log('TOPIC', topic)
-      // console.log('OBJ[TOPIC]', obj[topic])
-
+      console.log(topic)
       let articleArr = obj[topic]
       articleArr.forEach((article) => {
-        // console.log('id', article.id)
-        // console.log('authorName', article.authorName)
-        // console.log('authorPhoto', article.authorPhoto)
-        // console.log('headline', article.headline)
         document.querySelector(selector).appendChild(Card(article))
       })
     }
