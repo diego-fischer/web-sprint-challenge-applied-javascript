@@ -54,8 +54,8 @@ const cardAppender = (selector) => {
     let obj = res.data.articles
 
     for (let topic in res.data.articles) {
-      console.log('TOPIC', topic)
-      console.log('OBJ[TOPIC]', obj[topic])
+      // console.log('TOPIC', topic)
+      // console.log('OBJ[TOPIC]', obj[topic])
 
       let articleArr = obj[topic]
       articleArr.forEach((article) => {
@@ -66,7 +66,6 @@ const cardAppender = (selector) => {
         document.querySelector(selector).appendChild(Card(article))
       })
     }
-    // document.querySelector(selector).appendChild(Card())
   })
 
   // TASK 6
