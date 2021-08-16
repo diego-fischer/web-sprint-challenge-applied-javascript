@@ -14,6 +14,14 @@ body {
   color: #333;
   font-family: 'PT Sans', sans-serif;
 }
+.hidden {
+  display: none !important;
+}
+
+.filtered {
+  background-color: green !important;
+}
+
 .top-bar {
   width: 100%;
   display: flex;

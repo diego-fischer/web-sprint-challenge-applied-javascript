@@ -21,6 +21,35 @@ const Tabs = (topics) => {
     let divTab = document.createElement('div')
     divTab.classList.add('tab')
     divTab.textContent = el
+    divTab.addEventListener('click', (event) => {
+      const allCards = Array.from(document.querySelectorAll('div.card'))
+      console.log('ALL CARDS', allCards)
+
+      let targetTopic = event.target.textContent
+
+      if (targetTopic == 'node.js') {
+        targetTopic = 'node'
+      }
+      console.log('TARGET TOPIC', targetTopic)
+      const divsOfInterest = Array.from(
+        document.querySelectorAll(`.${targetTopic}`)
+      )
+
+      if (event.target.classList.contains('filtered')) {
+        allCards.forEach((el) => el.classList.remove('hidden'))
+        event.target.classList.toggle('filtered')
+      } else {
+        event.target.classList.toggle('filtered')
+        const toBeHidden = allCards.filter((el) => {
+          console.log('LOOPING CARDS', el)
+          return divsOfInterest.indexOf(el) == -1
+        })
+        console.log('TO BE HIDDEN', toBeHidden)
+
+        toBeHidden.forEach((el) => el.classList.add('hidden'))
+        divsOfInterest.forEach((el) => el.classList.remove('hidden'))
+      }
+    })
     divTopics.appendChild(divTab)
   })
   return divTopics
@@ -36,8 +65,7 @@ const tabsAppender = (selector) => {
   //
   axios.get(`http://localhost:5000/api/topics`).then((res) => {
     const data = res.data.topics
-    document.querySelector(selector).appendChild(Tabs(data))
-    //erro acontece aqui, chamando função Tabs
+    const newTab = document.querySelector(selector).appendChild(Tabs(data))
   })
 }
 
