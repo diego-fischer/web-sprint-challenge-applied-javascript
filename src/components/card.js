@@ -49,19 +49,27 @@ const Card = (article) => {
 }
 
 const cardAppender = (selector) => {
-  axios.get('http://localhost:5000/api/articles').then((res) => {
-    let obj = res.data.articles
+  axios
+    .get('http://localhost:5000/api/articles')
+    .then((res) => {
+      let obj = res.data.articles
 
-    for (let topic in res.data.articles) {
-      let articleArr = obj[topic]
-      articleArr.forEach((article) => {
-        const newArticle = document
-          .querySelector(selector)
-          .appendChild(Card(article))
-        newArticle.classList.add(topic)
-      })
-    }
-  })
+      for (let topic in res.data.articles) {
+        let articleArr = obj[topic]
+        articleArr.forEach((article) => {
+          const newArticle = document
+            .querySelector(selector)
+            .appendChild(Card(article))
+          newArticle.classList.add(topic)
+        })
+      }
+    })
+    .catch((err) => {
+      console.log(err)
+      document
+        .querySelector(selector)
+        .appendChild((document.createElement('p').textContent = err))
+    })
 
   // TASK 6
   // ---------------------
